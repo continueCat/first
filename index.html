@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>黑马面面</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+</head>
+
+<body>
+    <section class="wrap">
+        <header class="header">黑马面面</header>
+
+        <!-- 导航栏模块 -->
+        <nav class="nav">
+            <a href="#">
+                <img src="icons/icon1.png" alt="">
+                <span>HR面试</span>
+            </a>
+            <a href="#">
+                <img src="icons/icon2.png" alt="">
+                <span>笔试</span>
+            </a>
+            <a href="#">
+                <img src="icons/icon3.png" alt="">
+                <span>技术面试</span>
+            </a>
+            <a href="#">
+                <img src="icons/icon4.png" alt="">
+                <span>模拟面试</span>
+            </a>
+            <a href="#">
+                <img src="icons/icon5.png" alt="">
+                <span>面试技巧</span>
+            </a>
+            <a href="#">
+                <img src="icons/icon6.png" alt="">
+                <span>薪资查询</span>
+            </a>
+        </nav>
+
+        <!-- go模块 -->
+        <section class="go">
+            <img src="images/go.png" alt="">
+        </section>
+    </section>
+
+    <!-- 就业指导模块 -->
+    <section class="content">
+        <div class="con-hd">
+            <h4>就业指导</h4>
+            <a href="#" class="more">更多 >></a>
+        </div>
+        <div class="get-job-focus">
+            <!-- Swiper -->
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="#"><img src="images/pic.png" alt=""></a>
+                        <span>老师教你应试技巧</span>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#"><img src="images/ldh.jpg" alt=""></a>
+                        <span>三重刘德华</span>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#"><img src="images/3.jpg" alt=""></a>
+                        <span>男人中的极品</span>
+                    </div>
+                </div>
+
+            </div>
+            <!-- Add Arrows 根据需求这个代码放到 container外面 添加左右箭头-->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+    </section>
+
+    <script src="js/flexible.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 2,
+            spaceBetween: 30,
+            centeredSlides: true,
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+</body>
+
+</html>
