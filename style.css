@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 100px;
+}
+
+.magic {
+  margin-bottom: 50px;
+  padding: 12px 20px;
+  background-color: #27ef20;
+  color: #fff;
+  border: 0;
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: Times, "Times New Roman", Georgia, serif;
+  font-weight: 700;
+  cursor: pointer;
+  /* z-index: 100; */
+  /* 设置文字字符间距 */
+  letter-spacing: 1px;
+  box-shadow: 0 3px rgba(39, 252, 1, 0.5);
+}
+
+.magic:active {
+  transform: translateY(2px);
+  box-shadow: none;
+}
+
+
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  /* position: relative; */
+  width: 200px;
+  height: 200px;
+
+}
+
+/* box和big两个类中间不能有空格，表示同时具有这两个类 */
+.boxes.big {
+  width: 230px;
+  height: 230px;
+
+}
+
+.boxes.big .box {
+  transform: rotateZ(360deg);
+}
+
+.box {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  background: url(images/200w.webp) no-repeat;
+  background-position: -100px -100px;
+  background-size: 200px 200px;
+  transition: .4s ease;
+}
+
+
+.box::after {
+  content: '';
+  background-color: #07fdc7;
+  position: absolute;
+  top: 2px;
+  right: -4px;
+  height: 100%;
+  width: 4px;
+  transform: skewY(45deg);
+}
+
+.box::before {
+  content: '';
+  background-color: #07fdc7;
+  position: absolute;
+  left: 2px;
+  bottom: -4px;
+  height: 4px;
+  width: 100%;
+  transform: skewX(45deg);
+}
